@@ -6,7 +6,11 @@ const useSelect = (stateInicial, opciones) => {
   const [state, actualizarState] = useState(stateInicial);
 
   const SelectNoticias = () => (
-    <select className="browser-default" value={state} onChange={e => actualizarState(e.target.value)}>
+    <select
+      className="browser-default"
+      value={state}
+      onChange={e => actualizarState(e.target.value)}
+    >
       {opciones.map(opcion => {
         return (
           <option key={opcion.value} value={opcion.value}>
